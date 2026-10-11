@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="220" alt="orc worker with a pickaxe">
+</p>
+
 # orc-work-notify
 
 A [Claude Code](https://code.claude.com) plugin that plays a sound on three events, so you can go make tea and come back when it's time:
@@ -40,7 +44,7 @@ Prefer a different orc? Any orc. *That* orc. Drop your own `.wav` files in, name
 | `~/.claude/sounds/{submit,attention,stop}.wav` | every project |
 | `<project>/.claude/sounds/{submit,attention,stop}.wav` | that project only |
 
-They live outside the plugin, so updates never overwrite them, and copyrighted clips you own a copy of stay on your machine instead of in this repo. Skip a file to keep the bundled one; delete the bundled ones to fall back to your system's sounds (freedesktop `message`/`complete` on Linux, `Ping`/`Glass` on macOS; `submit` then stays silent).
+They live outside the plugin, so updates never overwrite them, and copyrighted clips you own a copy of stay on your machine instead of in this repo. Skip a file to keep the bundled one.
 
 ## Mute
 
@@ -57,4 +61,4 @@ Tries `afplay` (macOS), `pw-play`, `paplay`, `ffplay`, `aplay` in that order, fa
 
 ## License
 
-MIT
+Code: MIT. Bundled sounds: CC0 (see [Sounds](#sounds)).
