@@ -19,18 +19,28 @@ claude plugin install orc-work-notify@orc-work-notify
 
 Then restart Claude Code or run `/reload-plugins`.
 
-## Bring your own orc
+## Sounds
 
-The plugin ships **no voice clips**. Without clips it falls back to your system's sounds for `attention` and `stop` (freedesktop `message`/`complete` on Linux, `Ping`/`Glass` on macOS); `submit` stays silent.
+It ships with three orc clips from John Carroll's free [Orc Voice Pack](https://johncarroll.itch.io/orc-voice-pack) (CC0, public domain):
 
-Drop your own clips in, named after the event; the most specific wins:
+| Event | File | From the pack |
+|---|---|---|
+| `submit` | `sounds/submit.wav` | `yes1.wav` |
+| `attention` | `sounds/attention.wav` | `yescommand.wav` |
+| `stop` | `sounds/stop.wav` | `satisfied1.wav` |
+
+Thanks, John ([@jhncrrll_](https://x.com/jhncrrll_))!
+
+### Bring your own orc
+
+Prefer a different orc? Any orc. *That* orc. Drop your own `.wav` files in, named after the event; the most specific wins:
 
 | Where | Applies to |
 |---|---|
 | `~/.claude/sounds/{submit,attention,stop}.wav` | every project |
 | `<project>/.claude/sounds/{submit,attention,stop}.wav` | that project only |
 
-Any line you like, e.g. a grumpy *"Work work!"* for `submit`, *"Something need doing?"* for `attention` and *"Ready to work!"* for `stop`. Use clips you have the rights to: record your own, or pick CC0 voice packs (e.g. on [OpenGameArt](https://opengameart.org) or [Freesound](https://freesound.org)).
+They live outside the plugin, so updates never overwrite them, and copyrighted clips you own a copy of stay on your machine instead of in this repo. Skip a file to keep the bundled one; delete the bundled ones to fall back to your system's sounds (freedesktop `message`/`complete` on Linux, `Ping`/`Glass` on macOS; `submit` then stays silent).
 
 ## Mute
 
