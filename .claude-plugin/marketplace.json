@@ -1,0 +1,15 @@
+{
+  "name": "orc-work-notify",
+  "description": "Sound notifications for Claude Code: task done, attention needed.",
+  "owner": {
+    "name": "Evangelos Karatzas",
+    "url": "https://github.com/vagkaratzas"
+  },
+  "plugins": [
+    {
+      "name": "orc-work-notify",
+      "source": "./",
+      "description": "Sound on task done / attention needed. Bring your own orc."
+    }
+  ]
+}
