@@ -28,7 +28,7 @@ fi
     case "$P" in
       ffplay) "$P" -nodisp -autoexit -loglevel quiet "$F" ;;
       # Windows (Git Bash): SoundPlayer ships with .NET. Path goes in via env so quotes in it can't break the command.
-      powershell.exe) ORC_WAV="$(cygpath -w "$F")" "$P" -NoProfile -NonInteractive -Command '(New-Object Media.SoundPlayer $env:ORC_WAV).PlaySync()' ;;
+      powershell.exe) command -v cygpath >/dev/null && ORC_WAV="$(cygpath -w "$F")" "$P" -NoProfile -NonInteractive -Command '(New-Object Media.SoundPlayer $env:ORC_WAV).PlaySync()' ;;
       *)      "$P" "$F" ;;
     esac && exit 0
   done
